@@ -6,7 +6,9 @@ namespace Curs2CSharpProgramareProcedurala
 	{
 		public static void Main(string[] args)
 		{
-            // Ex.1
+            //////////
+            // Ex.1 //
+            //////////
 
 			int a = 3;
             // a = 3;
@@ -18,10 +20,11 @@ namespace Curs2CSharpProgramareProcedurala
 			//Ce va afisa aceasta la executie si de ce ?
 			// a =2, b =5, c =20
 
+			//////////
+			// Ex.2 //
+			//////////
 
-            // Ex. 2
-
-            double d = 2.95;
+			double d = 2.95;
 			// declarare variabila de tip double;
 			int i = 4;
 			// declarare variabila de tip integer
@@ -34,7 +37,9 @@ namespace Curs2CSharpProgramareProcedurala
 			// Ce afiseaza?
 			// Afiseaza 4
 
-			// Ex. 3
+			//////////
+			// Ex.3 //
+			//////////
 
 			int z = 3;
 			if (++z < 4)
@@ -45,7 +50,9 @@ namespace Curs2CSharpProgramareProcedurala
 					Console.WriteLine(a);
 			// Ce se afisa si de ce?
 
-			// Ex. 4
+			//////////
+			// Ex.4 //
+			//////////
 
 			int suma = 0;
 			for (int j = 1; j < 10; j++)
@@ -53,7 +60,22 @@ namespace Curs2CSharpProgramareProcedurala
 				suma = suma + j;
 			}
 			Console.WriteLine("Suma este: " +suma);
+			// Afiseaza
+			// Suma este: 45
 
+			//////////
+			// Ex.5 //
+			//////////
+
+			// Scrieti un program care sa returneze n!(adica n = 1 * 2 * 3 * … *n), unde n< 13 este un numar natural.
+			int nFactorial = 1;
+			for (int n = 2; n < 13; n++)
+			{
+				nFactorial *= n;
+			}
+			Console.WriteLine("n factorial este: " + nFactorial);
+			// Afiseaza
+			// n factorial este: 479001600
 		}
 	}
 
