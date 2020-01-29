@@ -76,6 +76,28 @@ namespace Curs2CSharpProgramareProcedurala
 			Console.WriteLine("n factorial este: " + nFactorial);
 			// Afiseaza
 			// n factorial este: 479001600
+
+			//////////
+			// Ex.6 //
+			//////////
+
+			// Scrieti un program care sa returneze minimum a trei numere intregi , folosind instructiunea if - else.
+			int primulNumar = 14;
+			int alDoileaNumar = 139;
+			int alTreileaNumar = 2;
+            if(primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
+            {
+                Console.WriteLine("Primul numar " + primulNumar + " este cel mai mic dintre cele trei numere intregi.");
+            }
+            else if (primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
+			{
+				Console.WriteLine("Al doilea numar " + alDoileaNumar + " este cel mai mic dintre cele trei numere intregi.");
+			}
+            else
+            {
+				Console.WriteLine("Al treilea numar " + alTreileaNumar + " este cel mai mic dintre cele trei numere intregi.");
+			}
+            
 		}
 	}
 
