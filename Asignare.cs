@@ -34,6 +34,18 @@ namespace Curs2CSharpProgramareProcedurala
 			// Ce afiseaza?
 			// Afiseaza 4
 
+			// Ex. 3
+
+			int z = 3;
+			if (++z < 4)
+                // z = 4; 4 < 4 returneaza fals si urmatorul bloc de cod din program nu se executa
+				if (z++ < 4)
+					Console.WriteLine(a);
+				else
+					Console.WriteLine(a);
+			// Ce se afisa si de ce?
+
+
 		}
 	}
 
