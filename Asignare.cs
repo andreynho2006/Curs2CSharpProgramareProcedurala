@@ -158,7 +158,30 @@ namespace Curs2CSharpProgramareProcedurala
 				default: break;
 			}
 
+			//////////////
+			// Optional //
+			//////////////
+			Console.WriteLine();
+			Console.WriteLine("OPTIONAL");
+
+			// Scrieti un program care calculeaza suma divizorilor naturali
+			// ai unui nr natural n.Exemplu: 28 = 1 + 2 + 4 + 7 + 14.Sa se genereze primele 4 astfel de numere.
+			int numar = 100;
+			Console.WriteLine($"Numar natural: {numar}");
+            
+			int numarulDivizorilor = 0;
+			int sumaDivizorilor = 0;
+            for(int num = 1; num <= numar; num++)
+            {
+                if(numar%num==0)
+                {
+					numarulDivizorilor++;
+					Console.WriteLine($"{numar}:\t{num}\t= \t{numar / num}");
+					sumaDivizorilor += num;	
+                }
+			}
+			Console.WriteLine("Suma divizorilor este = " + sumaDivizorilor + " si numarul divizorilor este " + numarulDivizorilor);
 		}
-	}
+    }
 
 }
