@@ -45,6 +45,14 @@ namespace Curs2CSharpProgramareProcedurala
 					Console.WriteLine(a);
 			// Ce se afisa si de ce?
 
+			// Ex. 4
+
+			int suma = 0;
+			for (int j = 1; j < 10; j++)
+			{
+				suma = suma + j;
+			}
+			Console.WriteLine("Suma este: " +suma);
 
 		}
 	}
