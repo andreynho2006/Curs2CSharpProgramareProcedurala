@@ -165,35 +165,46 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////////////////
 			// Suma divizorilor //
 			//////////////////////
+			
+			//Scrieti un program care calculeaza suma divizorilor naturali ai unui nr natural n.
+            //Exemplu: 28 = 1 + 2 + 4 +7 +14 . Sa se genereze primele 4 astfel de numere.
+
 
 			Console.WriteLine();
 			Console.WriteLine("OPTIONAL");
 			Console.WriteLine();
 			Console.WriteLine("Suma divizorilor\n");
+			Console.WriteLine();
+			Console.WriteLine("Primele 4 numere sunt\n");
 
-			// Scrieti un program care calculeaza suma divizorilor naturali
-			// ai unui nr natural n.Exemplu: 28 = 1 + 2 + 4 + 7 + 14.Sa se genereze primele 4 astfel de numere.
-			int numar = 100;
-			Console.WriteLine($"Numar natural: {numar}");
-
-			int numarulDivizorilor = 0;
-			int sumaDivizorilor = 0;
-			for (int num = 1; num <= numar; num++)
+			int raspuns = 0;
+			for (int num = 1; num < 1000000; num++)
 			{
-				if (numar % num == 0)
-				{
-					numarulDivizorilor++;
-					Console.WriteLine($"{numar}:\t{num}\t= \t{numar / num}");
-					sumaDivizorilor += num;
+				int sum = 0;
+
+				//aflam toti divizorii pentru un numar si calculam suma lor
+				for (int g = 1; g <= num / 2; g++)
+                {
+					if (num % g == 0)
+						sum += g;
 				}
+					
+				if (sum == num)
+                {
+                    raspuns += 1;
+					Console.WriteLine(num);
+				}
+                if(raspuns == 4)
+                {
+					break;
+                }
 			}
-			Console.WriteLine("Suma divizorilor este = " + sumaDivizorilor + " si numarul divizorilor este " + numarulDivizorilor);
 
 
 			///////////////////////
 			// Depozit la termen //
 			///////////////////////
-            
+
 			Console.WriteLine();
 			Console.WriteLine("Depozit la termen");
 			// Presupunem ca depunem o suma(depozit la termen) intr - o banca
@@ -232,6 +243,17 @@ namespace Curs2CSharpProgramareProcedurala
 			Console.WriteLine(minuteRamse);
 			Console.WriteLine(secundeRamase);
 			Console.WriteLine(secunde + " secunde este echivalent cu " + ore + " ore " + minuteRamse + " minute si " + secundeRamase + "secunde.");
+
+
+
+			//Orice numar par mai mare decat 2 se poate scrie ca suma a doua numere prime. Scrie un program care verifica afirmatia  pentru numere cuprinse intr-un interval [m,n]. 
+			//		Exemplu:
+			//			m = 700 , n = 1100
+			//Rezultat afisat:
+			//700 = 17 + 683
+			//702 = 11 + 691..........................1098 = 5 + 1093
+			//1100 = 3 + 1097
+		
 		}
 	}
 }
