@@ -97,7 +97,25 @@ namespace Curs2CSharpProgramareProcedurala
             {
 				Console.WriteLine("Al treilea numar " + alTreileaNumar + " este cel mai mic dintre cele trei numere intregi.");
 			}
-            
+
+			//////////
+			// Ex.7 //
+			//////////
+
+			// Determinati daca un numar este par sau impar.
+			Console.WriteLine("Introduceti un numar intreg");
+			int number = Console.Read();
+            if(number % 2 == 0)
+            {
+				Console.WriteLine("Numarul introdus este par");
+            }
+            else
+            {
+				Console.WriteLine("Numarul introdus este impar");
+
+			}
+
+
 		}
 	}
 
