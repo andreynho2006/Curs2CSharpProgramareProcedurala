@@ -11,12 +11,12 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			Console.WriteLine("EX.1");
 			int a = 3;
-            // a = 3;
+			// a = 3;
 			int b = (a = 2) * a;
-            // a = 2 b = 4
+			// a = 2 b = 4
 			int c = b * (b = 5);
-            // a = 2; b = 4; apoi b = 5; si c = 4 * 5 = 20;
-			Console.WriteLine("a =" +a + ", b =" +b + ", c =" +c);
+			// a = 2; b = 4; apoi b = 5; si c = 4 * 5 = 20;
+			Console.WriteLine("a =" + a + ", b =" + b + ", c =" + c);
 			//Ce va afisa aceasta la executie si de ce ?
 			// a =2, b =5, c =20
 
@@ -45,7 +45,7 @@ namespace Curs2CSharpProgramareProcedurala
 			Console.WriteLine("EX.3");
 			int z = 3;
 			if (++z < 4)
-                // z = 4; 4 < 4 returneaza fals si urmatorul bloc de cod din program nu se executa
+				// z = 4; 4 < 4 returneaza fals si urmatorul bloc de cod din program nu se executa
 				if (z++ < 4)
 					Console.WriteLine(a);
 				else
@@ -62,7 +62,7 @@ namespace Curs2CSharpProgramareProcedurala
 			{
 				suma = suma + j;
 			}
-			Console.WriteLine("Suma este: " +suma);
+			Console.WriteLine("Suma este: " + suma);
 			// Afiseaza
 			// Suma este: 45
 
@@ -90,16 +90,16 @@ namespace Curs2CSharpProgramareProcedurala
 			int primulNumar = 14;
 			int alDoileaNumar = 139;
 			int alTreileaNumar = 2;
-            if(primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
-            {
-                Console.WriteLine("Primul numar " + primulNumar + " este cel mai mic dintre cele trei numere intregi.");
-            }
-            else if (primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
+			if (primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
+			{
+				Console.WriteLine("Primul numar " + primulNumar + " este cel mai mic dintre cele trei numere intregi.");
+			}
+			else if (primulNumar < alDoileaNumar && primulNumar < alTreileaNumar)
 			{
 				Console.WriteLine("Al doilea numar " + alDoileaNumar + " este cel mai mic dintre cele trei numere intregi.");
 			}
-            else
-            {
+			else
+			{
 				Console.WriteLine("Al treilea numar " + alTreileaNumar + " este cel mai mic dintre cele trei numere intregi.");
 			}
 
@@ -111,12 +111,12 @@ namespace Curs2CSharpProgramareProcedurala
 			// Determinati daca un numar este par sau impar.
 			Console.WriteLine("Introduceti un numar intreg");
 			int number = Console.Read();
-            if(number % 2 == 0)
-            {
+			if (number % 2 == 0)
+			{
 				Console.WriteLine("Numarul introdus este par");
-            }
-            else
-            {
+			}
+			else
+			{
 				Console.WriteLine("Numarul introdus este impar");
 
 			}
@@ -130,10 +130,10 @@ namespace Curs2CSharpProgramareProcedurala
 			// saptamanii in functie de numarul acesteia.
 			// De exemplu : ziua 1 este echivalenta zilei “Luni”, ziua 2 este “Marti” etc.
 			int dayOfWeek = (int)DateTime.Now.DayOfWeek;
-            // cast xay  of the week to an integer
+			// cast xay  of the week to an integer
 			Console.WriteLine(dayOfWeek);
-            switch(dayOfWeek)
-            {
+			switch (dayOfWeek)
+			{
 				case 1:
 					Console.WriteLine("Day of week is: Luni");
 					break;
@@ -161,27 +161,77 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////////
 			// Optional //
 			//////////////
+
+			//////////////////////
+			// Suma divizorilor //
+			//////////////////////
+
 			Console.WriteLine();
 			Console.WriteLine("OPTIONAL");
+			Console.WriteLine();
+			Console.WriteLine("Suma divizorilor\n");
 
 			// Scrieti un program care calculeaza suma divizorilor naturali
 			// ai unui nr natural n.Exemplu: 28 = 1 + 2 + 4 + 7 + 14.Sa se genereze primele 4 astfel de numere.
 			int numar = 100;
 			Console.WriteLine($"Numar natural: {numar}");
-            
+
 			int numarulDivizorilor = 0;
 			int sumaDivizorilor = 0;
-            for(int num = 1; num <= numar; num++)
-            {
-                if(numar%num==0)
-                {
+			for (int num = 1; num <= numar; num++)
+			{
+				if (numar % num == 0)
+				{
 					numarulDivizorilor++;
 					Console.WriteLine($"{numar}:\t{num}\t= \t{numar / num}");
-					sumaDivizorilor += num;	
-                }
+					sumaDivizorilor += num;
+				}
 			}
 			Console.WriteLine("Suma divizorilor este = " + sumaDivizorilor + " si numarul divizorilor este " + numarulDivizorilor);
-		}
-    }
 
+
+			///////////////////////
+			// Depozit la termen //
+			///////////////////////
+            
+			Console.WriteLine();
+			Console.WriteLine("Depozit la termen");
+			// Presupunem ca depunem o suma(depozit la termen) intr - o banca
+			// ce ofera o dobanda de 25 % pe an.Sa se calculeze suma finala dupa
+			// un anumit numar de ani(se va tine cont de “dobanda la dobanda”).
+
+			int depozitLaTermen = 100;
+			int dobanda = 25;
+			int ani = 4;
+			for (var l = 1; l <= ani; l++)
+			{
+				int dobandaAnuala = (depozitLaTermen * dobanda) / 100;
+				depozitLaTermen += dobandaAnuala;
+			}
+			Console.WriteLine("Suma finala este: " + depozitLaTermen);
+
+			/////////////////////////////////////
+			// Secunde in ore, minute, secunde //
+			/////////////////////////////////////
+			///
+			Console.WriteLine();
+			Console.WriteLine("Transforma secunde in ore, minute, secunde");
+
+			// Scrieti un program care primeste la intrare (declarati voi ca variabila)
+			// un numar de secunde si afiseaza maximul de ore, minute, secunde care este
+			// echivant ca timp cu numarul initial de secunde. De exemplu: 7384 secunde
+			// este echivalent cu 2 ore 3 minute si 4 secunde
+			int secunde = 7384;
+			int minute = secunde / 60;
+			int ore = minute / 60;
+			int secundeRamase = secunde % 60;
+			int minuteRamse = minute % 60;
+			Console.WriteLine(ore);
+			Console.WriteLine(minute);
+			Console.WriteLine(secunde);
+			Console.WriteLine(minuteRamse);
+			Console.WriteLine(secundeRamase);
+			Console.WriteLine(secunde + " secunde este echivalent cu " + ore + " ore " + minuteRamse + " minute si " + secundeRamase + "secunde.");
+		}
+	}
 }
