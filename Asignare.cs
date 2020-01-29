@@ -6,10 +6,10 @@ namespace Curs2CSharpProgramareProcedurala
 	{
 		public static void Main(string[] args)
 		{
-            //////////
-            // Ex.1 //
-            //////////
-
+			//////////
+			// Ex.1 //
+			//////////
+			Console.WriteLine("EX.1");
 			int a = 3;
             // a = 3;
 			int b = (a = 2) * a;
@@ -23,7 +23,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.2 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.2");
 			double d = 2.95;
 			// declarare variabila de tip double;
 			int i = 4;
@@ -40,7 +41,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.3 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.3");
 			int z = 3;
 			if (++z < 4)
                 // z = 4; 4 < 4 returneaza fals si urmatorul bloc de cod din program nu se executa
@@ -53,7 +55,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.4 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.4");
 			int suma = 0;
 			for (int j = 1; j < 10; j++)
 			{
@@ -66,7 +69,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.5 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.5");
 			// Scrieti un program care sa returneze n!(adica n = 1 * 2 * 3 * … *n), unde n< 13 este un numar natural.
 			int nFactorial = 1;
 			for (int n = 2; n < 13; n++)
@@ -80,7 +84,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.6 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.6");
 			// Scrieti un program care sa returneze minimum a trei numere intregi , folosind instructiunea if - else.
 			int primulNumar = 14;
 			int alDoileaNumar = 139;
@@ -101,7 +106,8 @@ namespace Curs2CSharpProgramareProcedurala
 			//////////
 			// Ex.7 //
 			//////////
-
+			Console.WriteLine();
+			Console.WriteLine("EX.7");
 			// Determinati daca un numar este par sau impar.
 			Console.WriteLine("Introduceti un numar intreg");
 			int number = Console.Read();
@@ -115,6 +121,42 @@ namespace Curs2CSharpProgramareProcedurala
 
 			}
 
+			//////////
+			// Ex.8 //
+			//////////
+			Console.WriteLine();
+			Console.WriteLine("EX.8");
+			// Folosind instructiunea switch scrieti un program care sa afiseze ziua
+			// saptamanii in functie de numarul acesteia.
+			// De exemplu : ziua 1 este echivalenta zilei “Luni”, ziua 2 este “Marti” etc.
+			int dayOfWeek = (int)DateTime.Now.DayOfWeek;
+            // cast xay  of the week to an integer
+			Console.WriteLine(dayOfWeek);
+            switch(dayOfWeek)
+            {
+				case 1:
+					Console.WriteLine("Day of week is: Luni");
+					break;
+				case 2:
+					Console.WriteLine("Day of week is: Marti");
+					break;
+				case 3:
+					Console.WriteLine("Day of week is: Miercuri");
+					break;
+				case 4:
+					Console.WriteLine("Day of week is: Joi");
+					break;
+				case 5:
+					Console.WriteLine("Day of week is: Vineri");
+					break;
+				case 6:
+					Console.WriteLine("Day of week is: Sambata");
+					break;
+				case 7:
+					Console.WriteLine("Day of week is: Duminica");
+					break;
+				default: break;
+			}
 
 		}
 	}
