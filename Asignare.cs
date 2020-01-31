@@ -246,14 +246,46 @@ namespace Curs2CSharpProgramareProcedurala
 
 
 
-			//Orice numar par mai mare decat 2 se poate scrie ca suma a doua numere prime. Scrie un program care verifica afirmatia  pentru numere cuprinse intr-un interval [m,n]. 
+			// Orice numar par mai mare decat 2 se poate scrie ca suma a doua numere prime.
+			// Scrie un program care verifica afirmatia  pentru numere cuprinse intr-un interval [m,n]. 
 			//		Exemplu:
 			//			m = 700 , n = 1100
 			//Rezultat afisat:
 			//700 = 17 + 683
-			//702 = 11 + 691..........................1098 = 5 + 1093
+			//702 = 11 + 691
+			//1098 = 5 + 1093
 			//1100 = 3 + 1097
-		
+			int inceputInterval = 2;
+			int terminatInterval = 100;
+            for( int num1 = inceputInterval; num1 <= terminatInterval; num1++)
+            {
+                if(num1%2 == 0) // verifica daca numarul este par
+                {
+					for (int primeNum = 1; primeNum < num1; primeNum++) // pentru fiecare numar de la 1 pana la numarul par
+					{
+						if (isPrime(primeNum) && isPrime(num1 - primeNum)) // daca primul si al doilea numar sunt prime
+						{
+							Console.WriteLine(num1 + "=" + primeNum + "+" + (num1 - primeNum));
+						}
+					}
+				}
+                
+            }
+
+			// Functie ce verifica daca un numar este prim sau nu
+			static bool isPrime(int n)
+			{
+				if (n <= 1)
+					return false;
+
+				for (int i = 2;
+						 i <= Math.Sqrt(n); i++)
+				{
+					if (n % i == 0)
+						return false;
+				}
+				return true;
+			}
 		}
 	}
 }
